@@ -17,12 +17,12 @@ FIREBASE CONFIG
 
 
 const firebaseConfig = {
-apiKey: "YOUR_API_KEY",
-authDomain: "YOUR_PROJECT.firebaseapp.com",
-projectId: "YOUR_PROJECT_ID",
-storageBucket: "YOUR_PROJECT.appspot.com",
-messagingSenderId: "YOUR_SENDER_ID",
-appId: "YOUR_APP_ID"
+apiKey: "AIzaSyBHZ-foHQqLTArmNhLmhsZbRazqKWWKvlM",
+authDomain: "freshmart-ghosi.firebaseapp.com",
+projectId: "freshmart-ghosi",
+storageBucket: "freshmart-ghosi.firebasestorage.app",
+messagingSenderId: "613992585524",
+appId: "1:613992585524:web:444a44d92a783e5be2ad61"
 };
 
 
