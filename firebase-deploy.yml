@@ -1,0 +1,37 @@
+name: Deploy to Firebase Hosting
+on:
+  push:
+    branches:
+      - main # Jab bhi aap main branch par push karenge, tab deployment trigger hoga
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. GitHub repository se aapka code checkout karega
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. Node.js environment setup karega (JS/TS build karne ke liye)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 3. Aapke project ki sabhi NPM dependencies ko install karega
+      - name: Install Dependencies
+        run: npm ci
+
+      # 4. JavaScript/TypeScript project ko build karega (dist ya build folder banayega)
+      - name: Build Project
+        run: npm run build
+
+      # 5. Firebase Hosting par live channel par deploy karega
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FRESHMART_GHOSI }}
+          projectId: freshmart-ghosi
+          channelId: live
+          
