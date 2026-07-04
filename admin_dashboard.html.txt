@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Admin Dashboard | FreshMart</title>
+
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+
+<div class="sidebar">
+
+
+<div class="logo">
+
+
+🛒 FreshMart Admin
+
+
+</div>
+
+
+<ul>
+
+
+<li class="active">
+
+
+<i class="fa fa-chart-line"></i> Dashboard
+
+
+</li>
+
+
+<li>
+
+
+<a href="products.html">
+
+
+<i class="fa fa-box"></i> Products
+
+
+</a>
+
+
+</li>
+
+
+<li>
+
+
+<a href="categories.html">
+
+
+<i class="fa fa-list"></i> Categories
+
+
+</a>
+
+
+</li>
+
+
+<li>
+
+
+<a href="settings.html">
+
+
+<i class="fa fa-gear"></i> Settings
+
+
+</a>
+
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+
+<div class="main">
+
+
+<h1>Dashboard</h1>
+
+
+<p>Welcome to FreshMart Admin Panel</p>
+
+
+<!-- STATS CARDS -->
+
+
+<div class="cards">
+
+
+<div class="card">
+
+
+<h3 id="totalProducts">0</h3>
+
+
+<p>Total Products</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<h3 id="totalCategories">0</h3>
+
+
+<p>Total Categories</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<h3>₹0</h3>
+
+
+<p>Estimated Sales</p>
+
+
+</div>
+
+
+</div>
+
+
+<!-- QUICK ACTIONS -->
+
+
+<div class="actions">
+
+
+<a href="products.html" class="btn">
+
+
+Manage Products
+
+
+</a>
+
+
+<a href="categories.html" class="btn secondary">
+
+
+Manage Categories
+
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+<script type="module" src="js/dashboard.js"></script>
+
+
+</body>
+
+
+</html>

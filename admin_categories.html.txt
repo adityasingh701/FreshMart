@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Categories | FreshMart Admin</title>
+
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/products.css">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+
+<div class="sidebar">
+
+
+<div class="logo">🛒 FreshMart Admin</div>
+
+
+<ul>
+
+
+<li>
+<a href="dashboard.html">Dashboard</a>
+</li>
+
+
+<li>
+<a href="products.html">Products</a>
+</li>
+
+
+<li class="active">Categories</li>
+
+
+<li>
+<a href="settings.html">Settings</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+<!-- MAIN -->
+
+
+<div class="main">
+
+
+<h1>Category Management</h1>
+
+
+<p>Add and manage product categories</p>
+
+
+<!-- ACTIONS -->
+
+
+<div class="top-actions">
+
+
+<button id="openCatModal" class="btn">+ Add Category</button>
+
+
+</div>
+
+
+<!-- TABLE -->
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Actions</th>
+</tr>
+
+
+</thead>
+
+
+<tbody id="categoryTable">
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+</div>
+
+
+<!-- MODAL -->
+
+
+<div id="catModal" class="modal">
+
+
+<div class="modal-box">
+
+
+<h2>Add Category</h2>
+
+
+<form id="catForm">
+
+
+<input type="hidden" id="catId">
+
+
+<input type="text" id="catName" placeholder="Category Name">
+
+
+<input type="file" id="catImage">
+
+
+<button type="submit">Save Category</button>
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+
+<script type="module" src="js/categories.js"></script>
+
+
+</body>
+
+
+</html>

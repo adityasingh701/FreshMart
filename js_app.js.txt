@@ -1,0 +1,119 @@
+import { db } from "./firebase.js";
+
+
+import {
+collection,
+onSnapshot,
+query,
+orderBy
+} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+
+/* ==========================
+ELEMENTS
+========================== */
+
+
+const categoryGrid = document.getElementById("categoryGrid");
+const productGrid = document.getElementById("productGrid");
+
+
+/* ==========================
+LOAD CATEGORIES
+========================== */
+
+
+function loadCategories() {
+
+
+const q = query(collection(db, "categories"));
+
+
+onSnapshot(q, (snapshot) => {
+
+
+categoryGrid.innerHTML = "";
+
+
+snapshot.forEach((doc) => {
+
+
+const c = doc.data();
+
+
+categoryGrid.innerHTML += `
+<div>
+<img src="${c.image || 'images/placeholder.png'}" style="width:60px;height:60px;">
+<h4>${c.name}</h4>
+</div>
+`;
+
+
+});
+
+
+});
+
+
+}
+
+
+/* ==========================
+LOAD PRODUCTS
+========================== */
+
+
+function loadProducts() {
+
+
+const q = query(
+collection(db, "products"),
+orderBy("createdAt", "desc")
+);
+
+
+onSnapshot(q, (snapshot) => {
+
+
+productGrid.innerHTML = "";
+
+
+snapshot.forEach((doc) => {
+
+
+const p = doc.data();
+
+
+productGrid.innerHTML += `
+<div class="product-card">
+
+
+<img src="${p.image || 'images/placeholder.png'}" alt="${p.name}">
+
+
+<h3>${p.name}</h3>
+
+
+<p>₹${p.price}</p>
+
+
+</div>
+`;
+
+
+});
+
+
+});
+
+
+}
+
+
+/* ==========================
+INIT APP
+========================== */
+
+
+loadCategories();
+loadProducts();

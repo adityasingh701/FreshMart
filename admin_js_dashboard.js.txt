@@ -1,0 +1,65 @@
+import { db } from "../../js/firebase.js";
+
+
+import {
+collection,
+onSnapshot
+} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+
+/* =========================
+ELEMENTS
+========================= */
+
+
+const totalProducts = document.getElementById("totalProducts");
+const totalCategories = document.getElementById("totalCategories");
+
+
+/* =========================
+LOAD PRODUCTS COUNT
+========================= */
+
+
+function loadProducts() {
+
+
+onSnapshot(collection(db, "products"), (snapshot) => {
+
+
+totalProducts.innerText = snapshot.size;
+
+
+});
+
+
+}
+
+
+/* =========================
+LOAD CATEGORIES COUNT
+========================= */
+
+
+function loadCategories() {
+
+
+onSnapshot(collection(db, "categories"), (snapshot) => {
+
+
+totalCategories.innerText = snapshot.size;
+
+
+});
+
+
+}
+
+
+/* =========================
+INIT
+========================= */
+
+
+loadProducts();
+loadCategories();

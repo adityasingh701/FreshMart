@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Products Admin | FreshMart</title>
+
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/products.css">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+
+<div class="sidebar">
+
+
+<div class="logo">🛒 FreshMart Admin</div>
+
+
+<ul>
+
+
+<li>
+<a href="dashboard.html">
+<i class="fa fa-chart-line"></i> Dashboard
+</a>
+</li>
+
+
+<li class="active">
+<i class="fa fa-box"></i> Products
+</li>
+
+
+<li>
+<a href="categories.html">
+<i class="fa fa-list"></i> Categories
+</a>
+</li>
+
+
+<li>
+<a href="settings.html">
+<i class="fa fa-gear"></i> Settings
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+
+<div class="main">
+
+
+<h1>Product Management</h1>
+
+
+<p>Manage all your grocery products</p>
+
+
+<!-- TOP BAR -->
+
+
+<div class="top-actions">
+
+
+<button id="openModal" class="btn">
+
+
++ Add Product
+
+
+</button>
+
+
+<input type="text" id="search" placeholder="Search products...">
+
+
+<select id="categoryFilter">
+
+
+<option value="">All Categories</option>
+
+
+<option>Atta</option>
+
+
+<option>Rice</option>
+
+
+<option>Oil</option>
+
+
+<option>Dairy</option>
+
+
+<option>Snacks</option>
+
+
+<option>Beverages</option>
+
+
+<option>Spices</option>
+
+
+</select>
+
+
+</div>
+
+
+<!-- PRODUCT TABLE -->
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>Image</th>
+
+
+<th>Name</th>
+
+
+<th>Category</th>
+
+
+<th>Price</th>
+
+
+<th>Stock</th>
+
+
+<th>Actions</th>
+
+
+</tr>
+
+
+</thead>
+
+
+<tbody id="productTable">
+
+
+<!-- Firebase Data -->
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+</div>
+
+
+<!-- ================= ADD/EDIT MODAL ================= -->
+
+
+<div id="productModal" class="modal">
+
+
+<div class="modal-box">
+
+
+<h2>Add Product</h2>
+
+
+<form id="productForm">
+
+
+<input type="hidden" id="productId">
+
+
+<input type="text" id="name" placeholder="Product Name" required>
+
+
+<select id="category">
+
+
+<option>Atta</option>
+<option>Rice</option>
+<option>Oil</option>
+<option>Dairy</option>
+<option>Snacks</option>
+
+
+</select>
+
+
+<input type="number" id="price" placeholder="Price">
+
+
+<input type="number" id="stock" placeholder="Stock">
+
+
+<input type="file" id="image">
+
+
+<button type="submit">Save Product</button>
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+
+<script type="module" src="js/products.js"></script>
+
+
+</body>
+</html>
