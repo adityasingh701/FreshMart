@@ -191,11 +191,25 @@ Manage Categories
 
 
 </div>
+  <button id="logoutBtn" class="logout-btn">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+  </button>
 
 
 <script type="module" src="js/dashboard.js"></script>
 
+<script type="module" src="js/auth.js"></script>
 
+<script>
+
+document.getElementById("logoutBtn").addEventListener("click",()=>{
+
+logout();
+
+});
+
+</script>
 </body>
 
 
