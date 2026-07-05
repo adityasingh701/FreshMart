@@ -135,6 +135,27 @@ Login
 <div id="error"></div>
 
 </div>
+  <script type="module">
+
+import { auth } from "../js/firebase.js";
+
+import {
+
+onAuthStateChanged
+
+} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+
+onAuthStateChanged(auth,(user)=>{
+
+if(user){
+
+window.location.href="dashboard.html";
+
+}
+
+});
+
+  </script>
 
 <script type="module" src="js/login.js"></script>
 
